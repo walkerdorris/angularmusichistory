@@ -1,0 +1,19 @@
+{
+	"songs": [
+	{
+		"title": "The New Pollution",
+		"artist": "Beck",
+		"album": "Odelay"
+	},
+	{
+		"title": "Winnebago",
+		"artist": "Foo Fighters",
+		"album": "Foo Fighters"
+	},
+	{
+		"title": "Just",
+		"artist": "Radiohead",
+		"album": "The Bends"
+	}
+	]
+}

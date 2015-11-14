@@ -1,0 +1,22 @@
+{
+	"songs": [
+	{
+		"id": 1,
+		"title": "Medication",
+		"artist": "Queens of the Stone Age",
+		"album": "Lullabies To Paralyze"
+	},
+	{
+		"id": 2,
+		"title": "From A Motel 6",
+		"artist": "Yo La Tengo",
+		"album": "Extra Painful"
+	},
+	{
+		"id": 3,
+		"title": "Supersonic",
+		"artist": "Oasis",
+		"album": "Definitely Maybe"
+	}
+	]
+}
