@@ -4,40 +4,40 @@ app.config(["$routeProvider",
 		$routeProvider
 			.when("/songs/list", {
 				templateUrl: "partials/song-list.html",
-				controller: "SongCtrl"
+				controller: "SongCtrl as songList"
 			})
 			.when("/songs/new", {
 				templateUrl: "partials/song-form.html",
-				controller: "AddSongCtrl"
+				controller: "AddSongCtrl as addSongCtrl"
 			});
 	}]);
 // ****************
 // ANGULARFIRE
 // ****************
 
-    app.controller("SongCtrl", ["$scope", "$firebaseArray",
-  	  function($scope, $firebaseArray) {
+    app.controller("SongCtrl", ["$firebaseArray",
+  	  function($firebaseArray) {
 	
 
         var ref = new Firebase("https://angularmusichistoryw.firebaseio.com/songs");
-        $scope.songs = $firebaseArray(ref);
+        this.songs = $firebaseArray(ref);
           
         console.log($firebaseArray(ref));
         }
       ]);  
     
-    app.controller("AddSongCtrl", ["$scope", "$firebaseArray",
-    	function($scope, $firebaseArray) {
+    app.controller("AddSongCtrl", ["$firebaseArray",
+    	function($firebaseArray) {
     	  var ref = new Firebase("https://angularmusichistoryw.firebaseio.com/songs");
-    	  $scope.songs = $firebaseArray(ref);
-    	  $scope.newSong = {};
-    	  $scope.addSong = function() {
-    	  	$scope.songs.$add({
-    	  		title: $scope.newSong.title,
-    	  		album: $scope.newSong.album,
-    	  		artist: $scope.newSong.artist
+    	  this.songs = $firebaseArray(ref);
+    	  this.newSong = {};
+    	  this.addSong = function() {
+    	  	this.songs.$add({
+    	  		title: this.newSong.title,
+    	  		album: this.newSong.album,
+    	  		artist: this.newSong.artist
     	  	})
-    	  };
+    	  }.bind(this);
     	}]);
 	
 

@@ -1,13 +1,13 @@
 <section>
   <div>
-    Song name: <input type="text" ng-model="newSong.title" />
+    Song name: <input type="text" ng-model="addSongCtrl.newSong.title" />
   </div>
   <div>
-    Album Name: <input type="text" ng-model="newSong.album" />
+    Album Name: <input type="text" ng-model="addSongCtrl.newSong.album" />
   </div>
   
   <div>
-    Artist: <input type="text" ng-model="newSong.artist" />
+    Artist: <input type="text" ng-model="addSongCtrl.newSong.artist" />
   </div>
-  <button ng-click="addSong()">Add Song</button>
+  <button ng-click="addSongCtrl.addSong()">Add Song</button>
 </section>
